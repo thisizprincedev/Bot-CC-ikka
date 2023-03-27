@@ -4,7 +4,8 @@ WORKDIR /
 
 COPY . .
 
-RUN pip install -r requirements.txt \
-    pip install --upgrade pip 
-    
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
+
 CMD python -m mills
