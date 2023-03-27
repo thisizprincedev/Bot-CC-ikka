@@ -290,9 +290,6 @@ with open('datasets/bins_all.csv', mode='r', encoding='utf-8') as inp:
     current_index = 0
     for x in reader:
         current_index += 1
-        text = "\r Now: {0} - Total: {1} - Percent: {2}% ".format(current_index, length, int(round(current_index / length * 100)))
-        sys.stdout.write(text)
-        sys.stdout.flush()
         x2 = {
             "country": get_iso(x[1]),
             "iso": x[1],
