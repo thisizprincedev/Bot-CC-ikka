@@ -7,4 +7,4 @@ COPY . /app/
 RUN pip install --user -r /app/requirements.txt \
     pip install --upgrade pip
     
-RUN python -m /app/mills
+RUN cd /app \ python -m mills
