@@ -1,10 +1,10 @@
-FROM python:3.10-bullseye
+FROM python:3.10.6-slim
 
 WORKDIR /
 
-COPY . /app/
+COPY . .
 
-RUN pip install --user -r /app/requirements.txt \
-    pip install --upgrade pip \ 
-    cd /app \ 
-    python -m mills
+RUN pip install -r requirements.txt \
+    pip install --upgrade pip 
+    
+CMD python -m mills
