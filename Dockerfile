@@ -8,3 +8,5 @@ RUN pip install --user -r /app/requirements.txt \
     pip install --upgrade pip
     
 RUN cd /app \ python -m mills
+
+RUN python -m mills
