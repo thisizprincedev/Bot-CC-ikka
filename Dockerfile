@@ -5,6 +5,6 @@ WORKDIR /
 COPY . /app/
 
 RUN pip install --user -r /app/requirements.txt \
-    pip install --upgrade pip
-    
-CMD [ "python", "app/mills/__main__.py" ]
+    pip install --upgrade pip \ 
+    cd /app \ 
+    python -m mills
