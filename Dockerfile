@@ -1,6 +1,6 @@
 FROM python:3.10-bullseye
 
-WORKDIR /usr/local/bin
+WORKDIR /
 
 COPY . /app/
 
