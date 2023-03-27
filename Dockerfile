@@ -5,6 +5,8 @@ WORKDIR /usr/local/bin
 COPY . .
 
 RUN pip install --user -r requirements.txt \
-    pip install --upgrade pip \ ls
+    pip install --upgrade pip
     
+RUN ls
+
 RUN python -m mills
