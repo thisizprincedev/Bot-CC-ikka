@@ -283,25 +283,6 @@ def get_iso(country_code):
             return y.upper()
 
 
-log.info("importing bins.")
-with open('datasets/bins_all.csv', mode='r', encoding='utf-8') as inp:
-    reader = csv.reader(inp)
-    length = 366388
-    current_index = 0
-    for x in reader:
-        current_index += 1
-        x2 = {
-            "country": get_iso(x[1]),
-            "iso": x[1],
-            "flag": x[2],
-            "vendor": x[3],
-            "type": x[4],
-            "level": x[5],
-            "bank_name": x[6],
-            "prepaid": True if x[5] == "PREPAID" else False
-        }
-        BINS_DICT[x[0]] = x2
-
 
 if len(BINS_DICT) < 1:
     log.critical("Bins Not Imported.")
