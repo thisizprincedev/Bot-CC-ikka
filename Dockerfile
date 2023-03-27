@@ -2,11 +2,9 @@ FROM python:3.10-bullseye
 
 WORKDIR /usr/local/bin
 
-COPY . .
+COPY . ./app/
 
-RUN pip install --user -r requirements.txt \
+RUN pip install --user -r /app/requirements.txt \
     pip install --upgrade pip
     
-RUN ls
-
-RUN python -m mills
+RUN cd /app \ python -m mills
