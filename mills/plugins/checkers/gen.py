@@ -5,7 +5,7 @@
 <code>/gen</code> bin || <reply_to_msg> - Generate cards sempai.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 
 

@@ -7,7 +7,7 @@
 - <code>/quotepic</code> : Get a random quote in picture.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 import inspect
 import io

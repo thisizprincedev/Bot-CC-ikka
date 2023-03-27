@@ -5,7 +5,7 @@
 ➛ Stripe Charge $0.5
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 
 

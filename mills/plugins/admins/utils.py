@@ -17,7 +17,7 @@
 - <code>/pvtusers</code>: Get all privatt users.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 
 

@@ -4,7 +4,7 @@
 <code>/q</code> : get quote of replied message.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 
 

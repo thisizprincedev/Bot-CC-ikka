@@ -1,0 +1,82 @@
+2023-03-27 at 23:38:57 | INFO | Enabled logging intro userver.log file.
+2023-03-27 at 23:38:57 | INFO | Using 3.10.6 version of Python.
+2023-03-27 at 23:38:58 | INFO | Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
+2023-03-27 at 23:38:58 | INFO | cryptg detected, it will be used for encryption
+2023-03-27 at 23:38:59 | INFO | Loaded config.yml
+2023-03-27 at 23:39:00 | INFO | 
+            ----------------------------------------------------------------------
+                Deploying Millie! Visit @TakashiKovace for updates!!
+            ----------------------------------------------------------------------
+
+2023-03-27 at 23:39:00 | INFO | Starting client
+2023-03-27 at 23:39:00 | INFO | Connecting to 91.108.56.166:443/TcpFull...
+2023-03-27 at 23:39:00 | INFO | Connection to 91.108.56.166:443/TcpFull complete!
+2023-03-27 at 23:39:00 | INFO | Logged In as Ikka CC Checker
+2023-03-27 at 23:39:00 | INFO | Using DC 5
+2023-03-27 at 23:39:02 | INFO | Starting client
+2023-03-27 at 23:39:02 | INFO | Connecting to 149.154.167.51:443/TcpFull...
+2023-03-27 at 23:39:02 | INFO | Connection to 149.154.167.51:443/TcpFull complete!
+2023-03-27 at 23:39:03 | INFO | Phone migrated to 5
+2023-03-27 at 23:39:03 | INFO | Reconnecting to new data center 5
+2023-03-27 at 23:39:04 | INFO | Disconnecting from 149.154.167.51:443/TcpFull...
+2023-03-27 at 23:39:04 | INFO | Disconnection from 149.154.167.51:443/TcpFull complete!
+2023-03-27 at 23:39:04 | INFO | Connecting to 91.108.56.179:443/TcpFull...
+2023-03-27 at 23:39:06 | INFO | Connection to 91.108.56.179:443/TcpFull complete!
+2023-03-27 at 23:39:07 | INFO | Logged In as Ikka CC Checker
+2023-03-27 at 23:39:07 | INFO | Using DC 5
+2023-03-27 at 23:39:07 | INFO | Bot Username: @ikka_cc_checker_bot
+2023-03-27 at 23:39:07 | INFO | Bot Full Name: Ikka CC Checker
+2023-03-27 at 23:39:07 | INFO | Bot Id: 6187134031
+2023-03-27 at 23:39:09 | INFO | Cached 4 keys
+2023-03-27 at 23:39:11 | INFO | Cached 4 keys
+2023-03-27 at 23:39:11 | INFO | Connected to Redis
+2023-03-27 at 23:39:12 | INFO | Mongodb Connected...
+2023-03-27 at 23:39:12 | INFO | importing bins.
+2023-03-27 at 23:39:35 | INFO | imported bins.
+2023-03-27 at 23:39:35 | INFO | imported quotes.
+2023-03-27 at 23:39:35 | INFO | Loaded 1643 quotes
+2023-03-27 at 23:39:35 | INFO | check if gates are added or not.
+2023-03-27 at 23:39:35 | INFO | Initialising...
+2023-03-27 at 23:39:44 | INFO | Took 44s seconds to deploy Millie
+2023-03-27 at 23:39:44 | INFO | 
+            ----------------------------------------------------------------------
+                Millie has been deployed! Visit @TakashiKovace for updates!!
+            ----------------------------------------------------------------------
+
+2023-03-27 at 23:41:34 | INFO | Starting direct file download in chunks of 65536 at 0, stride 65536
+2023-03-27 at 23:41:35 | INFO | Uploading file of 113085 bytes in 1 chunks of 131072
+2023-03-27 at 23:54:00 | INFO | Got difference for account updates
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295432747376641, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295432747008001, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295462447334401, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295462446480385, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295466128671745, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295466128463873, ignoring
+2023-03-28 at 00:08:13 | WARNING | Server sent a very old message with ID 7215295942118879233, ignoring
+2023-03-28 at 00:08:15 | INFO | Got difference for channel 1931622277 updates
+2023-03-28 at 00:08:16 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-653' coro=<CallbackQuery.Event.answer() done, defined at C:\Python310\lib\site-packages\telethon\events\callbackquery.py:218> exception=QueryIdInvalidError('The query ID is invalid (caused by SetBotCallbackAnswerRequest)')>
+[33m[1mTraceback (most recent call last):[0m
+
+> File "[32mC:\Python310\lib\site-packages\telethon\events\[0m[32m[1mcallbackquery.py[0m", line [33m244[0m, in [35manswer[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1m_client[0m[1m([0m
+    [36m             │    └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x0000024FE4A45300>[0m
+    [36m             └ [0m[36m[1m<telethon.events.callbackquery.CallbackQuery.Event object at 0x0000024FFFD03B80>[0m
+
+  File "[32mC:\Python310\lib\site-packages\telethon\client\[0m[32m[1musers.py[0m", line [33m30[0m, in [35m__call__[0m
+    [35m[1mreturn[0m [35m[1mawait[0m [1mself[0m[35m[1m.[0m[1m_call[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_sender[0m[1m,[0m [1mrequest[0m[1m,[0m [1mordered[0m[35m[1m=[0m[1mordered[0m[1m)[0m
+    [36m             │    │     │             │                └ [0m[36m[1mFalse[0m
+    [36m             │    │     │             └ [0m[36m[1m<telethon.tl.functions.messages.SetBotCallbackAnswerRequest object at 0x0000024FFF9C68F0>[0m
+    [36m             │    │     └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x0000024FE4A45300>[0m
+    [36m             │    └ [0m[36m[1m<function UserMethods._call at 0x0000024FE2CFDB40>[0m
+    [36m             └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x0000024FE4A45300>[0m
+
+  File "[32mC:\Python310\lib\site-packages\telethon\client\[0m[32m[1musers.py[0m", line [33m84[0m, in [35m_call[0m
+    [1mresult[0m [35m[1m=[0m [35m[1mawait[0m [1mfuture[0m
+    [36m               └ [0m[36m[1m<Future finished exception=QueryIdInvalidError('The query ID is invalid (caused by SetBotCallbackAnswerRequest)')>[0m
+
+[31m[1mtelethon.errors.rpcerrorlist.QueryIdInvalidError[0m:[1m The query ID is invalid (caused by SetBotCallbackAnswerRequest)[0m
+2023-03-28 at 00:09:14 | INFO | 948010462 Generated Key: IKKA-38218-FWFCJ-PREMIUM
+2023-03-28 at 00:09:56 | INFO | Starting direct file download in chunks of 65536 at 0, stride 65536
+2023-03-28 at 00:09:56 | INFO | Uploading file of 113085 bytes in 1 chunks of 131072
+2023-03-28 at 00:24:01 | INFO | Got difference for account updates

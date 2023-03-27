@@ -7,7 +7,7 @@
 <code>/purge</code>: delete from replied message .
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 
 # from telethon import Button

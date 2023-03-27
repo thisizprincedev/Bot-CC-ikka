@@ -9,7 +9,7 @@ import random
 class random_user_api(object):
     """
     This is for the random user api genrator
-    author: Roldex
+    author: TakeshiKovace
     date: 12 DEC 2021
     """
     

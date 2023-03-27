@@ -13,7 +13,7 @@
 - <code>/calender</code>: Get current month calender.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 import calendar
 from datetime import datetime
@@ -45,7 +45,7 @@ async def _(m,lang):
         name = m.full_name(),
         id = m.sender_id,
     )
-    SUPPORT_CHAT = await m.adb.get_key("SUPPORT_CHAT") or "roldexverse"
+    SUPPORT_CHAT = await m.adb.get_key("SUPPORT_CHAT") or "TakashiKovace"
     buttons = [
         [
             Button.url("Support", f'https://t.me/{SUPPORT_CHAT}'),

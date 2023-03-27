@@ -5,7 +5,7 @@
 - <code>/buy<code>: Check Available plans for unlocking paid checker gates.
 ──────────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 import inspect
 import io
@@ -38,6 +38,6 @@ async def _(m):
 """
     buttons = [
         Button.url('Buy Now', 'https://t.me/r0ld3x'),
-        Button.url('Test Keys', 'https://t.me/roldexverse'),
+        Button.url('Test Keys', 'https://t.me/TakashiKovace'),
     ]
     await m.reply(text,buttons= buttons, file = BOT_PIC)

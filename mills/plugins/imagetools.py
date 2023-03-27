@@ -22,7 +22,7 @@
 - <code>/rmbg</code>: Remove Background from Image.
 ──────────────────────
 
-©<a href="https://t.me/roldexverse">RoldexVerse</a>
+© <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 """
 import asyncio
 import inspect

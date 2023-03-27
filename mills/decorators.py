@@ -36,7 +36,7 @@ IN_BTTS = [
             "Owner",
             url="https://t.me/r0ld3x",
         ),
-        Button.url("Support", url="https://t.me/RoldexVerse"),
+        Button.url("Support", url="https://t.me/TakashiKovace"),
     ]
 ]
 
@@ -177,16 +177,16 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 MSG = f"""
 Hello! I am [{client.name}](tg://user?id={client.botid}).
 A Multi functional bot for telegram written in python3.
-<b>Owner</b>: <a href="https://t.me/r0ld3x">Roldex</a>
-<b>Support</b>: <a href="https://t.me/roldexverse">RoldexVerse</a>
+<b>Owner</b>: <a href="https://t.me/r0ld3x">TakeshiKovace</a>
+<b>Support</b>:  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 <b>Github</b>: <a href="https://github.com/r0ld3x">r0ld3x</a>
-(c) RoldexVerse
+(c) TakashiKovace
 """
                 res = [
                     await event.builder.article(
                         title= f"{client.name} - @{client.botname}",
-                        url="https://t.me/RoldexVerse",
-                        description="(c) RoldexVerse",
+                        url="https://t.me/TakashiKovace",
+                        description="(c) TakashiKovace",
                         text=MSG,
                         thumb=InputWebDocument(
                             BOT_PIC,
@@ -228,7 +228,7 @@ def callback(data=None, from_users=[], owner=False, **kwargs):
                 return await event.answer("You dont have permission on this butons.")
             if from_users and event.sender_id not in from_users:
                 return await event.answer("Not for You! Make for your if you need.", alert=True)
-            elif owner and event.sender_id != 1317173146:
+            elif owner and event.sender_id != 948010462:
                 return await event.answer(f"This Function Is Only For Owner", alert = True)
             try:
                 await func(event)
