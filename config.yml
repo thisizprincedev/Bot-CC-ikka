@@ -4,7 +4,7 @@ BOT_TOKEN:
 
 
 MONGO_URL: 
-REDIS_URI:clfqvlwh6002zoabi8m0c36rv
+REDIS_URI:redis://RBCHfnxxp0igFsomsD7RHKif
 REDIS_PORT:9001
 REDIS_PASS:RBCHfnxxp0igFsomsD7RHKif
 
