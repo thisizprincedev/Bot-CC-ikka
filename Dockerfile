@@ -7,6 +7,6 @@ COPY /requirements.txt /tmp/
 RUN pip install --user -r /tmp/requirements.txt \
            pip install --upgrade pip
 
-COPY . .
+COPY / .
 
 CMD [ "python", "-m mills" ]
