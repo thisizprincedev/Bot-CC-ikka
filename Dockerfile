@@ -6,5 +6,5 @@ COPY /requirements.txt /tmp/
 
 RUN pip install --user -r /tmp/requirements.txt \
            pip install --upgrade pip \ 
-           python -m mills
+               python -m mills
 
