@@ -1,10 +1,9 @@
 FROM python:3.10-bullseye
 
-WORKDIR /
+WORKDIR /usr/local/bin
 
-COPY /requirements.txt /tmp/
+COPY . .
 
-RUN pip install --user -r /tmp/requirements.txt \
-           pip install --upgrade pip
-
-CMD [ "python", "-m mills" ]
+RUN pip install --user -r requirements.txt \
+    pip install --upgrade pip \
+    python -m mills
