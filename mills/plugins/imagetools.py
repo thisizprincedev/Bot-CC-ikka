@@ -49,7 +49,7 @@ from mills import client
 @bot_cmd(cmd="carbon", text_only = True)
 async def carbon(m):
     query = m.text.split(maxsplit=1)
-    if query and len(query) == 1 or not query: return await m.sod("give me a text. \n Usage:  <code>/carbon print('Millie Rusk')</code")
+    if query and len(query) == 1 or not query: return await m.sod("give me a text. \n Usage:  <code>/carbon print('Ikka Bot')</code")
     res = await Carbon1(query[1])
     await m.reply(file = res, supports_streaming=True)
     if os.path.exists(res):

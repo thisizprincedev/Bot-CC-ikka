@@ -34,7 +34,7 @@ IN_BTTS = [
     [
         Button.url(
             "Owner",
-            url="https://t.me/r0ld3x",
+            url="https://t.me/takashikovace",
         ),
         Button.url("Support", url="https://t.me/TakashiKovace"),
     ]
@@ -177,9 +177,8 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                 MSG = f"""
 Hello! I am [{client.name}](tg://user?id={client.botid}).
 A Multi functional bot for telegram written in python3.
-<b>Owner</b>: <a href="https://t.me/r0ld3x">TakeshiKovace</a>
+<b>Owner</b>: <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
 <b>Support</b>:  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
-<b>Github</b>: <a href="https://github.com/r0ld3x">r0ld3x</a>
 (c) TakashiKovace
 """
                 res = [

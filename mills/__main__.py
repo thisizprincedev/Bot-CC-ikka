@@ -18,7 +18,7 @@ client.run(startup())
 
 suc_msg = """
             ----------------------------------------------------------------------
-                Millie has been deployed! Visit @TakashiKovace for updates!!
+                Ikka CC Checker Bot has been deployed! Visit @TakashiKovace for updates!!
             ----------------------------------------------------------------------
 """
 
@@ -27,6 +27,6 @@ Importer('mills/plugins', True)
 
 
 if '__main__' == __name__:
-    log.info("Took {} seconds to deploy Millie".format(time_formatter((time() - start_time) * 1000)))
+    log.info("Took {} seconds to deploy Ikka CC Checker Bot".format(time_formatter((time() - start_time) * 1000)))
     log.info(suc_msg)
     client.rud()

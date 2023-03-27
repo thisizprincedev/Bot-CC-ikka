@@ -32,14 +32,14 @@ from telethon.sessions import StringSession
 
 start_deploy = """
             ----------------------------------------------------------------------
-                Deploying Millie! Visit @TakashiKovace for updates!!
+                Deploying Ikka CC Checker Bot! Visit @TakashiKovace for updates!!
             ----------------------------------------------------------------------
 """
 
 log.info(start_deploy)
 
-# if os.path.exists("Millie.session"):
-#     os.unlink("Millie.session")
+# if os.path.exists("IkkaBot.session"):
+#     os.unlink("IkkaBot.session")
 
 start_time = int(time())
 

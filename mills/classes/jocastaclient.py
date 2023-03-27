@@ -18,7 +18,7 @@ class JocastaClient(TelegramClient):
     
     def __init__(
         self,
-        session_name: str = "Millie",
+        session_name: str = "IkkaBot",
         api_id: int = None,
         api_hash: str = None,
         bot_token: str = None,

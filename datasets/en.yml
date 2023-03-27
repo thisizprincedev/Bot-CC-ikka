@@ -1,6 +1,6 @@
 start: |
   Hello <a href="tg://user?id={id}">{name}</a>!
-  I am <a href="https://t.me/MillieRusk_bot">Millie</a> from  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
+  I am <a href="https://t.me/ikka_cc_checker_bot">Ikka CC Checker</a> from  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
   hit /cmds to chek my all Available commands.
 
 
