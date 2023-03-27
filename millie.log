@@ -45,3 +45,6 @@
 
 2023-03-28 at 01:40:34 | INFO | Starting direct file download in chunks of 65536 at 0, stride 65536
 2023-03-28 at 01:40:34 | INFO | Uploading file of 113085 bytes in 1 chunks of 131072
+2023-03-28 at 02:48:34 | INFO | Disconnecting from 91.108.56.179:443/TcpFull...
+2023-03-28 at 02:48:34 | INFO | Disconnection from 91.108.56.179:443/TcpFull complete!
+2023-03-28 at 02:48:34 | INFO | Not disconnecting (already have no connection)
