@@ -283,11 +283,6 @@ def get_iso(country_code):
             return y.upper()
 
 
-
-if len(BINS_DICT) < 1:
-    log.critical("Bins Not Imported.")
-    sys.exit(1)
-
 log.info("imported bins.")
 
 log.info("imported quotes.")
