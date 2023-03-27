@@ -5,6 +5,6 @@ WORKDIR /
 COPY /requirements.txt /tmp/
 
 RUN pip install --user -r /tmp/requirements.txt \
-           pip install --upgrade pip
+           pip install --upgrade pip \ 
+           python -m mills
 
-CMD [ "python", "mills" ]
