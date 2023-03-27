@@ -44,6 +44,5 @@ gTTS
 faker
 emoji
 fontTools
-git+https://github.com/66niko99/py-adyen-encrypt.git
 pymongo
 cryptography
