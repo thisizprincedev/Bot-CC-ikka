@@ -9,7 +9,7 @@ def chk_one(r,rand_user):
     if not a: return
 
     b_data = {
-    'amount': '10',
+    'amount': '5',
     'otheramount': '',
     'title': 'Mr',
     'title_other_value': '',
@@ -22,9 +22,9 @@ def chk_one(r,rand_user):
     'town': rand_user['city'],
     'county': rand_user['state'],
     'telephone': rand_user['phone'],
-    'email': ['email'],
+    'email': rand_user['email'],
     'contact_pref_4': '1',
-    'donation_submit': 'Next step    ',
+    'donation_submit': 'Next step',
     }
 
     # b = r.post('https://hobanz.org.nz/donate/setamount', b_data)
