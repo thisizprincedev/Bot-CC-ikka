@@ -60,8 +60,9 @@ def get_cards():
             if len(mes) not in [2 , 4] or len(mes) == 2 and mes > '12' or len(mes) == 2 and mes < '01':
                 await m.sod("Invalid Card Expiry Month. Try Again With A Valid Expiry Month.", time = 5)
                 return
-            if len(ano) not in [2,4] or len(ano) == 2 and ano < '21' or len(ano)  == 4 and ano < '2021' or len(ano) == 2 and ano > '29' or len(ano)  == 4 and ano > '2029':
+            if len(ano) not in [2,4] or len(ano) == 2 and ano < '23' or len(ano)  == 4 and ano < '2023' or len(ano) == 2 and ano > '32' or len(ano)  == 4 and ano > '2032':
                 await m.sod("Invalid Card Expiry Year. Try Again With A Valid Expiry Year.", time = 5)
+                return
             if cc[0] == 3 and len(cvv) != 4 or len(cvv) != 3:
                 await m.sod("Invalid Card CVV. Try Again With A Valid CVV.", time = 5)
                 return 

