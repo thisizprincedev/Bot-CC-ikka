@@ -43,12 +43,12 @@ async def _(m, gate_db, user_db, cards, lang):
         r.proxies = {'http': proxy, 'https': proxy}
     crsf = au_one(r)
     if not crsf:
-        await message.edit("Error while checking your card. trying again....")
+        await message.edit("Error while checking your card. trying again 01....")
         return
     
     head = au_two(r, crsf)
     if not head:
-        await message.edit("Error while checking your card. trying again....")
+        await message.edit("Error while checking your card. trying again 02....")
         return
     sec , req_sec = head
     await message.edit(lang['mid_msg'].format(

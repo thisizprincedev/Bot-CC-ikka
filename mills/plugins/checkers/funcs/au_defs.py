@@ -22,8 +22,7 @@ def au_two(r, crsf):
 'password': user_info['password'],
 'submit_btn': 'Create My Account',
 }
-    c = r.post('https://sslmate.com/signup?for=basic', data = payload_c)
-    if not c: return
+    r.post('https://sslmate.com/signup?for=basic', data = payload_c)
     payload_d = {'csrf_token': crsf}
     d = r.post('https://sslmate.com/console/create_stripe_setup_intent', data = payload_d)
     if not d: return
