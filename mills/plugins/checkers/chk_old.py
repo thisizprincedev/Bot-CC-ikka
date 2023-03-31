@@ -22,13 +22,13 @@ from mills.plugins.checkers.utils.gateinfo import get_gate_info
 from mills.plugins import rand_user_base
 from mills.plugins.checkers.utils.getcards  import get_cards
 from mills.plugins._helpers.strings import get_strings
-from mills.plugins.checkers.funcs.chk_defs import chk_one, chk_two,get_response_chk
+from mills.plugins.checkers.funcs.chk_defs_old import chk_one, chk_two,get_response_chk
 
 
 
 
-@bot_cmd(cmd="chk", text_only = True)
-@get_gate_info("chk")
+@bot_cmd(cmd="chk_old", text_only = True)
+@get_gate_info("chk_old")
 @get_cards()
 @get_strings("card_chk")
 async def _(m, gate_db, user_db, cards, lang):

@@ -54,7 +54,7 @@ async def _(m, gate_db, user_db, cards, lang):
         id = m.sender_id,
         taken = int(time.time()) - start_time,
     ))
-    last = chk_two(browser, sec,cc,mes,ano,cvv,rand_user)
+    last = chk_two(browser, rand_user, sec, cc, mes, ano, cvv)
     if 'status' in last and 'succeeded' in last['status']:
         r_text, r_logo, r_respo = "CHARGED $5", "✅", 'CVV MATCH'
     else:
