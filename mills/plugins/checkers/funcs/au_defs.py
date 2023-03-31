@@ -16,14 +16,15 @@ def au_one(r):
 def au_two(r, crsf):
     user_info = RandUser().rand_user()
     payload_c = {
-'csrf_token': crsf,
-'username': user_info['username'],
-'email': user_info['email'],
-'password': user_info['password'],
-'submit_btn': 'Create My Account',
-}
+    'csrf_token': crsf,
+    'username': user_info['username'],
+    'email': user_info['email'],
+    'password': user_info['password'],
+    'submit_btn': 'Create My Account',
+    }
+    
     r.post('https://sslmate.com/signup?for=basic', data = payload_c)
-    payload_d = {'csrf_token': crsf}
+    payload_d='csrf_token='+crsf
     d = r.post('https://sslmate.com/console/create_stripe_setup_intent', data = payload_d)
     if not d: return
     sec = d.json()['client_secret'] if 'client_secret' in d.json() else None
