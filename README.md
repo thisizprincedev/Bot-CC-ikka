@@ -1,4 +1,4 @@
-# ikka_bot
+# Ikka_bot
 A Advance CC Checker Bot Based On Python
 
 ## To Start
