@@ -5,7 +5,7 @@ from mills.plugins import BINS_DICT
 def get_bin_info(bin_to_find: int):
     if str(bin_to_find[:6]) in BINS_DICT:
         xx = BINS_DICT[str(bin_to_find[:6])]
-        return xx if not xx['prepaid'] else False
+        return xx
     else:
         url="https://lookup.binlist.net/"+bin_to_find
         r = requests.get(url).json()
@@ -38,6 +38,8 @@ def get_bin_info(bin_to_find: int):
             url = r['bank']['url']
         except:
             url = 'None'
+
+            
         return {
             "country": country,
             "iso": alpha2,
@@ -47,7 +49,7 @@ def get_bin_info(bin_to_find: int):
             "level": brand,
             "bank_name": bank,
             "prepaid": True if type == "PREPAID" else False
-        }
+        } 
 
 def get_bin_info_all(bin_to_find):
     
