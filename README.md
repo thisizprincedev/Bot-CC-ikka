@@ -1,4 +1,4 @@
-# millierusk_bot
+# ikka_bot
 A Advance CC Checker Bot Based On Python
 
 ## To Start
