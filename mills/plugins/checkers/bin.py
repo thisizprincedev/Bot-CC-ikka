@@ -28,7 +28,7 @@ async def _(m):
         return
     bin_info = get_bin_info(text[:6])
     if not bin_info:
-        url="https://lookup.binlist.net/"+bin
+        url="https://lookup.binlist.net/"+text[:6]
         r = requests.get(url).json()
 
         try:
