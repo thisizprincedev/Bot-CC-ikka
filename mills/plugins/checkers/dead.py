@@ -19,7 +19,7 @@ import requests
 from telethon import Button
 from mills import LOG_CHAT
 
-from mills.decorators import bot_cmd,callback
+from mills.decorators import bot_cmd
 from mills.plugins.checkers.utils.gateinfo import get_gate_info
 from mills.plugins import rand_user_base
 from mills.plugins.checkers.utils.getcards  import get_cards
@@ -62,7 +62,7 @@ async def _(m, gate_db, user_db, cards, lang):
         browser = requests.Session()
         
         if proxy:= await m.adb.get_key('use_proxy'):
-            browser.proxies = {'http': proxy, 'https': proxy}
+            browser.proxies = {'https': proxy}
             
         uuid = dead_one(browser, rand_user)
         
