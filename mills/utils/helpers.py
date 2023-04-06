@@ -3,6 +3,8 @@ from mills import sdb
 
 def insert_gates(sdb):
     dict = [
+    {"_id": "proxy", "status": True, "status_logo": "✅", "gate_type": "other", "cmd_name": "proxy", "gate_name": "All PRoxy","made_by_id": 948010462, "made_by_name": "TakeshiKovace", "is_paid": True, "date": "2023-03-31"},
+    {"_id": "dead", "status": True, "status_logo": "✅", "gate_type": "dead", "cmd_name": "dead", "gate_name": "Deader Chimpa", "made_by_id": 948010462, "made_by_name": "TakeshiKovace", "is_paid": True, "date": "2023-03-31"},
     {"_id": "chk", "status": True, "status_logo": "✅", "gate_type": "auth", "cmd_name": "chk", "gate_name": "Stripe Auth", "made_by_id": 948010462, "made_by_name": "TakeshiKovace", "is_paid": False, "date": "2023-03-31"},
     {"_id": "au", "status": True, "status_logo": "✅", "gate_type": "auth", "cmd_name": "au", "gate_name": "Stripe Aut", "made_by_id": 948010462, "made_by_name": "TakeshiKovace", "is_paid": False, "date": "2023-03-31"},
     {"_id": "ad", "status": True, "status_logo": "✅", "gate_type": "charge", "charge_amount": "56", "cmd_name": "ad", "gate_name": "Adyen ", "made_by_id": 948010462, "made_by_name": "TakeshiKovace",         "is_paid": True, "date": "2023-03-31"},

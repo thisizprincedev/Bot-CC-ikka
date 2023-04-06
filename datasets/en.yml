@@ -73,4 +73,32 @@ card_chk:
     <b>[×] Took</b>: <b>{taken}</b>'s
     <b>[×] User</b>: <a href="tg://user?id={id}">{name}</a> [<b>{role}</b>]
     <b>[×] Host</b>:  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>
+
+
+card_dead: 
+  fir_msg: |
+    <b><a href="tg://user?id={id}">{name}</a> Wait deading your card. </b>
+    <b>[×] ■■□□□□□□□□ 20%</b>
+    <b>[×] Elapsed</b>: <b>{taken}'s</b>
+
+  mid_msg: |
+    <b><a href="tg://user?id={id}">{name}</a> Wait deading your card. </b>
+    <b>[×] ■■■■■□□□□□ 50%</b>
+    <b>[×] Elapsed</b>: <b>{taken}'s</b>
+
+  trys_msg: |
+    <b><a href="tg://user?id={id}">{name}</a> Wait deading your card. </b>
+    <b>[×] Deading</b>: <b>{progress}</b>
+    <b>[×] Total Trys</b>: <b>{trys}</b>
+    <b>[×] Elapsed</b>: <b>{taken}'s</b>  
   
+  fin_msg: |
+    <b>[×] Gate</b>: <b>{gate_name}</b>
+    <b>[×] Card</b>: <code>{card}</code>
+    <b>[×] Status</b>: <b>{status}</b> {logo}
+    <b>[×] Message</b>: <b>{message}</b>
+    <b>[×] Bin</b>: <b>{vendor}</b> - <b>{type}</b> - <b>{country}</b> {flag}
+    <b>[×] Bank</b>: <b>{bank_name}</b>
+    <b>[×] Took</b>: <b>{taken}</b>'s
+    <b>[×] User</b>: <a href="tg://user?id={id}">{name}</a> [<b>{role}</b>]
+    <b>[×] Host</b>:  <a href="https://t.me/TakashiKovace">TakeshiKovace</a>

@@ -1,44 +1,43 @@
-2023-03-28 at 03:01:27 | INFO | Enabled logging intro userver.log file.
-2023-03-28 at 03:01:27 | INFO | Using 3.10.6 version of Python.
-2023-03-28 at 03:01:27 | INFO | Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
-2023-03-28 at 03:01:27 | INFO | cryptg detected, it will be used for encryption
-2023-03-28 at 03:01:29 | INFO | Loaded config.yml
-2023-03-28 at 03:01:29 | INFO | 
+2023-04-06 at 18:33:58 | INFO | Enabled logging intro userver.log file.
+2023-04-06 at 18:33:58 | INFO | Using 3.9.6 version of Python.
+2023-04-06 at 18:33:58 | INFO | cryptg detected, it will be used for encryption
+2023-04-06 at 18:33:59 | INFO | Loaded config.yml
+2023-04-06 at 18:33:59 | INFO | 
             ----------------------------------------------------------------------
                 Deploying Ikka CC Checker Bot! Visit @TakashiKovace for updates!!
             ----------------------------------------------------------------------
 
-2023-03-28 at 03:01:29 | INFO | Starting client
-2023-03-28 at 03:01:29 | INFO | Connecting to 91.108.56.166:443/TcpFull...
-2023-03-28 at 03:01:29 | INFO | Connection to 91.108.56.166:443/TcpFull complete!
-2023-03-28 at 03:01:30 | INFO | Logged In as Ikka CC Checker
-2023-03-28 at 03:01:30 | INFO | Using DC 5
-2023-03-28 at 03:01:31 | INFO | Starting client
-2023-03-28 at 03:01:31 | INFO | Connecting to 149.154.167.51:443/TcpFull...
-2023-03-28 at 03:01:31 | INFO | Connection to 149.154.167.51:443/TcpFull complete!
-2023-03-28 at 03:01:32 | INFO | Phone migrated to 5
-2023-03-28 at 03:01:32 | INFO | Reconnecting to new data center 5
-2023-03-28 at 03:01:33 | INFO | Disconnecting from 149.154.167.51:443/TcpFull...
-2023-03-28 at 03:01:33 | INFO | Disconnection from 149.154.167.51:443/TcpFull complete!
-2023-03-28 at 03:01:33 | INFO | Connecting to 91.108.56.179:443/TcpFull...
-2023-03-28 at 03:01:35 | INFO | Connection to 91.108.56.179:443/TcpFull complete!
-2023-03-28 at 03:01:36 | INFO | Logged In as Ikka CC Checker
-2023-03-28 at 03:01:36 | INFO | Using DC 5
-2023-03-28 at 03:01:36 | INFO | Bot Username: @ikka_cc_checker_bot
-2023-03-28 at 03:01:36 | INFO | Bot Full Name: Ikka CC Checker
-2023-03-28 at 03:01:36 | INFO | Bot Id: 6187134031
-2023-03-28 at 03:01:39 | INFO | Cached 8 keys
-2023-03-28 at 03:01:41 | INFO | Cached 8 keys
-2023-03-28 at 03:01:42 | INFO | Connected to Redis
-2023-03-28 at 03:01:42 | INFO | Mongodb Connected...
-2023-03-28 at 03:01:42 | INFO | importing bins.
-2023-03-28 at 03:02:04 | INFO | imported bins.
-2023-03-28 at 03:02:04 | INFO | imported quotes.
-2023-03-28 at 03:02:04 | INFO | Loaded 1643 quotes
-2023-03-28 at 03:02:04 | INFO | check if gates are added or not.
-2023-03-28 at 03:02:04 | INFO | Initialising...
-2023-03-28 at 03:02:10 | INFO | Took 41s seconds to deploy Ikka CC Checker Bot
-2023-03-28 at 03:02:10 | INFO | 
+2023-04-06 at 18:33:59 | INFO | Starting client
+2023-04-06 at 18:33:59 | INFO | Connecting to 91.108.56.166:443/TcpFull...
+2023-04-06 at 18:33:59 | INFO | Connection to 91.108.56.166:443/TcpFull complete!
+2023-04-06 at 18:34:01 | INFO | Logged In as IKKA Checker
+2023-04-06 at 18:34:01 | INFO | Using DC 5
+2023-04-06 at 18:34:02 | INFO | Starting client
+2023-04-06 at 18:34:02 | INFO | Connecting to 149.154.167.51:443/TcpFull...
+2023-04-06 at 18:34:02 | INFO | Connection to 149.154.167.51:443/TcpFull complete!
+2023-04-06 at 18:34:04 | INFO | Phone migrated to 5
+2023-04-06 at 18:34:04 | INFO | Reconnecting to new data center 5
+2023-04-06 at 18:34:05 | INFO | Disconnecting from 149.154.167.51:443/TcpFull...
+2023-04-06 at 18:34:05 | INFO | Disconnection from 149.154.167.51:443/TcpFull complete!
+2023-04-06 at 18:34:05 | INFO | Connecting to 91.108.56.137:443/TcpFull...
+2023-04-06 at 18:34:07 | INFO | Connection to 91.108.56.137:443/TcpFull complete!
+2023-04-06 at 18:34:09 | INFO | Logged In as IKKA Checker
+2023-04-06 at 18:34:09 | INFO | Using DC 5
+2023-04-06 at 18:34:09 | INFO | Bot Username: @ikka_cc_checker_bot
+2023-04-06 at 18:34:09 | INFO | Bot Full Name: IKKA Checker
+2023-04-06 at 18:34:09 | INFO | Bot Id: 6187134031
+2023-04-06 at 18:34:14 | INFO | Cached 17 keys
+2023-04-06 at 18:34:19 | INFO | Cached 17 keys
+2023-04-06 at 18:34:20 | INFO | Connected to Redis
+2023-04-06 at 18:34:20 | INFO | Mongodb Connected...
+2023-04-06 at 18:34:20 | INFO | importing bins.
+2023-04-06 at 18:34:27 | INFO | imported bins.
+2023-04-06 at 18:34:27 | INFO | imported quotes.
+2023-04-06 at 18:34:27 | INFO | Loaded 1643 quotes
+2023-04-06 at 18:34:27 | INFO | check if gates are added or not.
+2023-04-06 at 18:34:27 | INFO | Initialising...
+2023-04-06 at 18:34:33 | INFO | Took 34s seconds to deploy Ikka CC Checker Bot
+2023-04-06 at 18:34:33 | INFO | 
             ----------------------------------------------------------------------
                 Ikka CC Checker Bot has been deployed! Visit @TakashiKovace for updates!!
             ----------------------------------------------------------------------
