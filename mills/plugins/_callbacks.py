@@ -11,7 +11,7 @@ from pymongo import MongoClient
 import pymongo
 
 from telethon import Button
-from mills import ADMINS, BOT_PIC, sdb
+from mills import ADMINS, BOT_PIC, sdb, mdb
 from mills.plugins.checkers.utils.bininfo import get_bin_info, get_bin_info_all
 
 from mills.plugins.checkers.utils.tools import cc_gen
@@ -78,7 +78,18 @@ async def _(m):
     else:
         await m.answer("No Module Found With This Name. You Can Use <code>.help</code> To See All Modules.")
 
-
+@callback(re.compile("deadClose_(.*)"))
+async def _(m):
+    key = m.data_match.group(1).decode("utf-8")
+    update = await mdb.update_one('deadJob', {'_id': int(key)}, {
+            '$set': {'status': False, 'status_logo': '❌'}
+        })  
+    print(update);
+    if update:
+       await m.edit('Deader Closed ✅')
+    else:
+        await m.edit("Error While Closing Deader")
+    
 
 ##gen
 @callback(re.compile("gen_(.*)"))
@@ -199,10 +210,10 @@ async def auth(event):
     text += f"Total Auth gates: {iter_length}\n\n"
     for a in finded:
         text += f"""
-───────────────────────
-[×] {a['gate_name']}:- <code>/{a['cmd_name']}</code>
-[×] State: {a['status_logo']} | Paid: {a['is_paid']}
-"""
+            ───────────────────────
+            [×] {a['gate_name']}:- <code>/{a['cmd_name']}</code>
+            [×] State: {a['status_logo']} | Paid: {a['is_paid']}
+            """
         # text += f"<code>/{a['cmd_name']}</code> - {a['gate_name']} - {a['status_logo']} - {a['is_paid']}\n───────────────────────\n"
     text += "\n───────────────────────\n<i>Choose other buttons for other gates</i>."
     butt = [
