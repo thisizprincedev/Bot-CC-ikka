@@ -2,3 +2,115 @@
 2023-04-07 at 16:14:09 | INFO | Using 3.10.6 version of Python.
 2023-04-07 at 16:14:09 | INFO | Failed to load SSL library: <class 'OSError'> (no library called "ssl" found)
 2023-04-07 at 16:14:09 | INFO | cryptg detected, it will be used for encryption
+2023-04-07 at 16:14:10 | INFO | Loaded config.yml
+2023-04-07 at 16:14:11 | INFO | 
+            ----------------------------------------------------------------------
+                Deploying Ikka CC Checker Bot! Visit @TakashiKovace for updates!!
+            ----------------------------------------------------------------------
+
+2023-04-07 at 16:14:11 | INFO | Starting client
+2023-04-07 at 16:14:11 | INFO | Connecting to 91.108.56.166:443/TcpFull...
+2023-04-07 at 16:14:11 | INFO | Connection to 91.108.56.166:443/TcpFull complete!
+2023-04-07 at 16:14:11 | INFO | Logged In as IKKA Checker
+2023-04-07 at 16:14:11 | INFO | Using DC 5
+2023-04-07 at 16:14:12 | INFO | Starting client
+2023-04-07 at 16:14:12 | INFO | Connecting to 149.154.167.51:443/TcpFull...
+2023-04-07 at 16:14:12 | INFO | Connection to 149.154.167.51:443/TcpFull complete!
+2023-04-07 at 16:14:14 | INFO | Phone migrated to 5
+2023-04-07 at 16:14:14 | INFO | Reconnecting to new data center 5
+2023-04-07 at 16:14:15 | INFO | Disconnecting from 149.154.167.51:443/TcpFull...
+2023-04-07 at 16:14:15 | INFO | Disconnection from 149.154.167.51:443/TcpFull complete!
+2023-04-07 at 16:14:15 | INFO | Connecting to 91.108.56.146:443/TcpFull...
+2023-04-07 at 16:14:16 | INFO | Connection to 91.108.56.146:443/TcpFull complete!
+2023-04-07 at 16:14:17 | INFO | Logged In as IKKA Checker
+2023-04-07 at 16:14:17 | INFO | Using DC 5
+2023-04-07 at 16:14:17 | INFO | Bot Username: @ikka_cc_checker_bot
+2023-04-07 at 16:14:17 | INFO | Bot Full Name: IKKA Checker
+2023-04-07 at 16:14:17 | INFO | Bot Id: 6187134031
+2023-04-07 at 16:14:23 | INFO | Cached 18 keys
+2023-04-07 at 16:14:29 | INFO | Cached 18 keys
+2023-04-07 at 16:14:29 | INFO | Connected to Redis
+2023-04-07 at 16:14:29 | INFO | Mongodb Connected...
+2023-04-07 at 16:14:29 | INFO | importing bins.
+2023-04-07 at 16:14:51 | INFO | imported bins.
+2023-04-07 at 16:14:51 | INFO | imported quotes.
+2023-04-07 at 16:14:51 | INFO | Loaded 1643 quotes
+2023-04-07 at 16:14:51 | INFO | check if gates are added or not.
+2023-04-07 at 16:14:51 | INFO | Initialising...
+2023-04-07 at 16:14:57 | INFO | Took 46s seconds to deploy Ikka CC Checker Bot
+2023-04-07 at 16:14:57 | INFO | 
+            ----------------------------------------------------------------------
+                Ikka CC Checker Bot has been deployed! Visit @TakashiKovace for updates!!
+            ----------------------------------------------------------------------
+
+2023-04-07 at 16:22:17 | ERROR | Unhandled exception on wrapper
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32mC:\Python310\lib\[0m[32m[1mrunpy.py[0m", line [33m196[0m, in [35m_run_module_as_main[0m
+    [35m[1mreturn[0m [1m_run_code[0m[1m([0m[1mcode[0m[1m,[0m [1mmain_globals[0m[1m,[0m [36m[1mNone[0m[1m,[0m
+    [36m       │         │     └ [0m[36m[1m{'__name__': '__main__', '__doc__': None, '__package__': 'mills', '__loader__': <_frozen_importlib_external.SourceFileLoader ...[0m
+    [36m       │         └ [0m[36m[1m<code object <module> at 0x000001C744C73B50, file "D:\bot\Bot-CC-ikka\mills\__main__.py", line 1>[0m
+    [36m       └ [0m[36m[1m<function _run_code at 0x000001C744C8B130>[0m
+
+  File "[32mC:\Python310\lib\[0m[32m[1mrunpy.py[0m", line [33m86[0m, in [35m_run_code[0m
+    [1mexec[0m[1m([0m[1mcode[0m[1m,[0m [1mrun_globals[0m[1m)[0m
+    [36m     │     └ [0m[36m[1m{'__name__': '__main__', '__doc__': None, '__package__': 'mills', '__loader__': <_frozen_importlib_external.SourceFileLoader ...[0m
+    [36m     └ [0m[36m[1m<code object <module> at 0x000001C744C73B50, file "D:\bot\Bot-CC-ikka\mills\__main__.py", line 1>[0m
+
+  File "[32mD:\bot\Bot-CC-ikka\mills\[0m[32m[1m__main__.py[0m", line [33m32[0m, in [35m<module>[0m
+    [1mclient[0m[35m[1m.[0m[1mrud[0m[1m([0m[1m)[0m
+    [36m│      └ [0m[36m[1m<function JocastaClient.rud at 0x000001C74B6929E0>[0m
+    [36m└ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x000001C74B69AA40>[0m
+
+  File "[32mD:\bot\Bot-CC-ikka\mills\classes\[0m[32m[1mjocastaclient.py[0m", line [33m81[0m, in [35mrud[0m
+    [35m[1mreturn[0m [1mself[0m[35m[1m.[0m[1mrun_until_disconnected[0m[1m([0m[1m)[0m
+    [36m       │    └ [0m[36m[1m<function UpdateMethods.run_until_disconnected at 0x000001C749A127A0>[0m
+    [36m       └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x000001C74B69AA40>[0m
+
+  File "[32mC:\Python310\lib\site-packages\telethon\client\[0m[32m[1mupdates.py[0m", line [33m93[0m, in [35mrun_until_disconnected[0m
+    [35m[1mreturn[0m [1mself[0m[35m[1m.[0m[1mloop[0m[35m[1m.[0m[1mrun_until_complete[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_run_until_disconnected[0m[1m([0m[1m)[0m[1m)[0m
+    [36m       │    │                       │    └ [0m[36m[1m<function UpdateMethods._run_until_disconnected at 0x000001C749A12680>[0m
+    [36m       │    │                       └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x000001C74B69AA40>[0m
+    [36m       │    └ [0m[36m[1m<property object at 0x000001C7498F0400>[0m
+    [36m       └ [0m[36m[1m<mills.classes.jocastaclient.JocastaClient object at 0x000001C74B69AA40>[0m
+
+  File "[32mC:\Python310\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m633[0m, in [35mrun_until_complete[0m
+    [1mself[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+    [36m│    └ [0m[36m[1m<function ProactorEventLoop.run_forever at 0x000001C746D99870>[0m
+    [36m└ [0m[36m[1m<ProactorEventLoop running=True closed=False debug=False>[0m
+
+  File "[32mC:\Python310\lib\asyncio\[0m[32m[1mwindows_events.py[0m", line [33m321[0m, in [35mrun_forever[0m
+    [1msuper[0m[1m([0m[1m)[0m[35m[1m.[0m[1mrun_forever[0m[1m([0m[1m)[0m
+
+  File "[32mC:\Python310\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m600[0m, in [35mrun_forever[0m
+    [1mself[0m[35m[1m.[0m[1m_run_once[0m[1m([0m[1m)[0m
+    [36m│    └ [0m[36m[1m<function BaseEventLoop._run_once at 0x000001C746CDF910>[0m
+    [36m└ [0m[36m[1m<ProactorEventLoop running=True closed=False debug=False>[0m
+
+  File "[32mC:\Python310\lib\asyncio\[0m[32m[1mbase_events.py[0m", line [33m1896[0m, in [35m_run_once[0m
+    [1mhandle[0m[35m[1m.[0m[1m_run[0m[1m([0m[1m)[0m
+    [36m│      └ [0m[36m[1m<function Handle._run at 0x000001C746C47370>[0m
+    [36m└ [0m[36m[1m<Handle Task.task_wakeup(<Future finis...01C7666EB1C0>>)>[0m
+
+  File "[32mC:\Python310\lib\asyncio\[0m[32m[1mevents.py[0m", line [33m80[0m, in [35m_run[0m
+    [1mself[0m[35m[1m.[0m[1m_context[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mself[0m[35m[1m.[0m[1m_callback[0m[1m,[0m [35m[1m*[0m[1mself[0m[35m[1m.[0m[1m_args[0m[1m)[0m
+    [36m│    │            │    │           │    └ [0m[36m[1m<member '_args' of 'Handle' objects>[0m
+    [36m│    │            │    │           └ [0m[36m[1m<Handle Task.task_wakeup(<Future finis...01C7666EB1C0>>)>[0m
+    [36m│    │            │    └ [0m[36m[1m<member '_callback' of 'Handle' objects>[0m
+    [36m│    │            └ [0m[36m[1m<Handle Task.task_wakeup(<Future finis...01C7666EB1C0>>)>[0m
+    [36m│    └ [0m[36m[1m<member '_context' of 'Handle' objects>[0m
+    [36m└ [0m[36m[1m<Handle Task.task_wakeup(<Future finis...01C7666EB1C0>>)>[0m
+
+> File "[32mC:\Python310\lib\site-packages\telethon\client\[0m[32m[1mupdates.py[0m", line [33m520[0m, in [35m_dispatch_update[0m
+    [35m[1mawait[0m [1mcallback[0m[1m([0m[1mevent[0m[1m)[0m
+    [36m      │        └ [0m[36m[1m<telethon.events.callbackquery.CallbackQuery.Event object at 0x000001C7666EAB00>[0m
+    [36m      └ [0m[36m[1m<function callback.<locals>.ultr.<locals>.wrapper at 0x000001C75F4663B0>[0m
+
+  File "[32mD:\bot\Bot-CC-ikka\mills\[0m[32m[1mdecorators.py[0m", line [33m226[0m, in [35mwrapper[0m
+    [35m[1mif[0m [35m[1mnot[0m [1mowner[0m [35m[1mand[0m  [1mevent[0m[35m[1m.[0m[1msender_id[0m [35m[1m!=[0m [1mrm[0m[35m[1m.[0m[1msender_id[0m[1m:[0m
+    [36m       │          │     │            └ [0m[36m[1mNone[0m
+    [36m       │          │     └ [0m[36m[1m<property object at 0x000001C74991F510>[0m
+    [36m       │          └ [0m[36m[1m<telethon.events.callbackquery.CallbackQuery.Event object at 0x000001C7666EAB00>[0m
+    [36m       └ [0m[36m[1mFalse[0m
+
+[31m[1mAttributeError[0m:[1m 'NoneType' object has no attribute 'sender_id'[0m
