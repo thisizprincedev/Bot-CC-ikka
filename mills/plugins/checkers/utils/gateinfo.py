@@ -18,7 +18,7 @@ def get_gate_info(cmd_name: str = None,is_shopify = False):
             if user['type'] == "P":
                 if user['expire_days'] < time.time():
                     await m.sod("Your Premium Plan has expired. Please contact @TakashiKovace for renewing your plan.", time = 5)
-                    await mdb.update_one('users',{'_id':m.sender_id},{'plan':"F",'role': "Free"})
+                    await mdb.update_one('users',{'_id':m.sender_id},{'$set': {'plan':"F",'role': "Free"}})
                     return
                 # elif user['expire_days'] - time.time() < 3600:
                 #     await m.sod("Your Premium Plan will expire in 1 hour. Please contact @TakashiKovace for renewing your plan.", time = 5)

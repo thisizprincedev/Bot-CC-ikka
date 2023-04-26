@@ -52,14 +52,14 @@ def auto_shopify(cc: str or int, mes: str or int, ano: str or int, cvv: str or i
     if not auth_token:
         return
     d_data = {
-'checkout[shipping_address][country]': 'United States',
-'checkout[client_details][browser_width]': '1351',
-'checkout[client_details][browser_height]': '658',
-'checkout[client_details][javascript_enabled]': '1',
-'checkout[client_details][color_depth]': '24',
-'checkout[client_details][java_enabled]': 'false',
-'checkout[client_details][browser_tz]': '-330',
-}
+        'checkout[shipping_address][country]': 'United States',
+        'checkout[client_details][browser_width]': '1351',
+        'checkout[client_details][browser_height]': '658',
+        'checkout[client_details][javascript_enabled]': '1',
+        'checkout[client_details][color_depth]': '24',
+        'checkout[client_details][java_enabled]': 'false',
+        'checkout[client_details][browser_tz]': '-330',
+        }
     rand_sho = RandUser().get_sho_auto()
     soup = BeautifulSoup(c.text,"html.parser")
     inputs = soup.findAll('input', attrs={'type': 'text'})

@@ -59,7 +59,7 @@ async def _(m, gate_db, user_db, cards, lang):
         
         cvvRand = random_cvv_date_exp(3)
         
-        res = await deadb_three(message, cc, mes, ano, cvvRand)
+        res = deadb_three(message, cc, mes, ano, cvvRand)
         
         if 'error' in res:
             if countTrys in [10,20,30,40,50,60,70,80,90,100]:
